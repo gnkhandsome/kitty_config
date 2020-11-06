@@ -1,0 +1,1 @@
+[{"id":1,"type":"kitty","desc":"猫"},{"id":2,"type":"coin","desc":"金币"},{"id":3,"type":"coin_second","desc":"金币（以秒为单位）"},{"id":4,"type":"reward","desc":"另一reward"},{"id":5,"type":"time_cash_kitty","desc":"限时招财猫"},{"id":6,"type":"box","desc":"转盘宝箱"},{"id":7,"type":"ticket","desc":"转盘券"},{"id":8,"type":"ad","desc":"广告券（测试）"}]

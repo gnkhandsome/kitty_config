@@ -1,0 +1,115 @@
+{
+  "server": {
+    "run_mode": "debug",
+    "listen_addr": ":8001",
+    "ws_listen_addr": ":8002",
+    "world_http_addr" : ":8004",
+    "limit_connection": 0,
+    "root_router_prefix": "api",
+    "read_timeout": 10,
+    "write_timeout": 10,
+    "idle_timeout": 120,
+    "max_header_bytes": 1048576,
+    "sign" : 1
+  },
+  "logger": {
+    "level": "debug",
+    "formatter": "json",
+    "disable_console": false,
+    "write": false,
+    "path": "./runtime/logs",
+    "file_name": "daily",
+    "max_age": 24,
+    "rotation_time": 168,
+    "debug": false
+  },
+  "mysql": {
+    "driver": "mysql",
+    "host": "152.136.201.90",
+    "port": "3306",
+    "user": "ck_test",
+    "password": "ca#2R3P?dua",
+    "db_name": "kitty"
+  },
+  "redis": {
+    "host": "152.136.201.90",
+    "port": 7001,
+    "auth": "h46l4p0a3",
+    "max_idle": 20,
+    "max_active": 100,
+    "db": 1
+  },
+  "cocos": {
+    "api_path": "https://api.cocosbcx.net/api/v1",
+    "host": "api.cocosbcx.net",
+    "use_ssl": true,
+    "secret": "",
+    "account": "test001",
+    "password": "justoxh"
+  },
+  "amqp": {
+    "host": "152.136.201.90",
+    "port": 5672,
+    "username": "guest",
+    "password": "8K1SOLph"
+  },
+  "pangolin_exchange": {
+    "name": "pangolin",
+    "type": "fanout",
+    "queue": {
+      "name": "reward_local",
+      "routing_key": "",
+      "durable": true
+    }
+  },
+  "world_exchange": {
+    "name": "world_exchange",
+    "type": "fanout",
+    "is_durable": false,
+    "auto_delete": true,
+    "internal": false,
+    "no_wait": false,
+    "world_queue": "world_queue"
+  },
+  "http_queue": {
+    "name": "kitty_http_queue",
+    "durable": true,
+    "auto_delete": false,
+    "exclusive": false,
+    "no_wait": false
+  },
+  "queues": ["limited_kitty"],
+  "wechat": {
+    "app_id": "wx1af0c5054da7d6b6",
+    "app_secret": "25b366fd89fcff7a9610bf5b4d712ff9"
+  },
+  "wechat_auth":{
+    "app_id": "wx0ce23c94b60996f6",
+    "app_secret": "2b6d1009f832dbe9d99f5fd4262ff780",
+    "token": "kitty",
+    "encoding_aes_key": "j8oJ0L6te7m0qtnqY7R7cR2yEhNPqKvngyNmXnAnyLF",
+    "callback": "http://kitty.dev.cocosbcx.net/api/callback/wechat",
+    "download_url": "http://kitty.touchchain.cn",
+    "share_url": "http://kitty.dev.cocosbcx.net/coveredbuilding",
+    "invite_url": "http://kitty.dev.cocosbcx.net"
+  },
+  "jwt": {
+    "secret": "kitty",
+    "expires": 15
+  },
+  "tables" : {
+    "path" : "./tables_config/"
+  },
+
+  "games" : [
+    {"sign": 1, "addr": "127.0.0.1", "port": 8002}
+  ],
+  "oss": {
+    "secret_id": "AKIDFQS3Wr4C8wY12K4DTbfovuqiQAi8FcfZ",
+    "secret_key": "1s2KXZUFtMqEVgnncJ3iGgw5OaebR7h8",
+    "endpoint": "https://kitty-1256894151.cos.ap-beijing.myqcloud.com"
+  },
+  "pangolin":{
+    "reward_video":"9d234b87b91ce59b3031a74b8902b4cd"
+  }
+}

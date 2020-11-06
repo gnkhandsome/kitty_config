@@ -1,0 +1,8 @@
+[
+    {
+        "default_dog1_num": 1,
+        "default_coin_num": 500,
+        "offline_rate": 20,
+        "merge_interval": 2
+    }
+]
